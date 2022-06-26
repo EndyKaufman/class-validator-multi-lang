@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: class-validator\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-06-26 00:31\n"
+"PO-Revision-Date: 2022-06-26 01:31\n"
 
 #: src/decorator/object/IsInstance.ts:41
 msgid "$IS_INSTANCE decorator expects and object as value, but got falsy value."
@@ -309,7 +309,7 @@ msgstr "$property muss groß sein"
 
 #: src/decorator/string/IsOctal.ts:27
 msgid "$property must be valid octal number"
-msgstr "$property muss eine gültige oktal-Nummer sein"
+msgstr "$property muss eine gültige Oktalzahl sein"
 
 #: src/decorator/string/IsPassportNumber.ts:28
 msgid "$property must be valid passport number"
@@ -402,11 +402,11 @@ msgstr "$property sollte keinen $constraint1 String enthalten"
 
 #: src/decorator/string/IsByteLength.ts:29
 msgid "$property's byte length must fall into ($constraint1, $constraint2) range"
-msgstr "Die Byte-Länge von $propertymuss in den Bereich ($constraint1, $constraint2) fallen"
+msgstr "Die Byte-Länge von $property muss in den Bereich ($constraint1, $constraint2) fallen"
 
 #: src/decorator/array/ArrayUnique.ts:44
 msgid "All $property's elements must be unique"
-msgstr "Alle Elemente von $propertymüssen eindeutig sein"
+msgstr "Alle Elemente von $property müssen eindeutig sein"
 
 #: src/decorator/common/ValidateNested.ts:13
 msgid "each value in "
