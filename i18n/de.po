@@ -10,11 +10,11 @@ msgstr ""
 "Project-Id-Version: class-validator\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2021-12-27 18:04\n"
+"PO-Revision-Date: 2022-06-26 00:31\n"
 
 #: src/decorator/object/IsInstance.ts:41
 msgid "$IS_INSTANCE decorator expects and object as value, but got falsy value."
-msgstr "$IS_INSTANCE Dekorator erwartet und Objekt als Wert, bekam aber Falschwert."
+msgstr "$IS_INSTANCE Dekorator erwartet ein Objekt als Wert, bekam aber einen falschen Wert."
 
 #: src/decorator/date/MaxDate.ts:25
 #: src/decorator/date/MinDate.ts:25
@@ -95,11 +95,11 @@ msgstr "$property muss ein jwt-String sein"
 
 #: src/decorator/common/IsLatitude.ts:25
 msgid "$property must be a latitude string or number"
-msgstr "$property muss eine Breitenzeichenkette oder eine Zahl sein"
+msgstr "$property muss eine Breitengrad-Zeichenkette oder eine Zahl sein"
 
 #: src/decorator/common/IsLatLong.ts:25
 msgid "$property must be a latitude,longitude string"
-msgstr "$property muss ein Breitengrad sein, Längengrad"
+msgstr "$property muss eine Breitengrad, Längengrad Zeichenkette sein"
 
 #: src/decorator/common/IsLongitude.ts:25
 msgid "$property must be a longitude string or number"
@@ -115,7 +115,7 @@ msgstr "$property muss eine MAC-Adresse sein"
 
 #: src/decorator/string/IsMongoId.ts:27
 msgid "$property must be a mongodb id"
-msgstr "$property muss eine Mongodb id sein"
+msgstr "$property muss eine MongoDB-ID sein"
 
 #: src/decorator/number/IsNegative.ts:24
 msgid "$property must be a negative number"
@@ -127,7 +127,7 @@ msgstr "$property muss ein nicht-leeres Objekt sein"
 
 #: src/decorator/typechecker/IsNumber.ts:56
 msgid "$property must be a number conforming to the specified constraints"
-msgstr "$property muss eine Zahl sein, die den angegebenen Einschränkungen entspricht"
+msgstr "$property muss eine Zahl sein, die die angegebenen Voraussetzungen erfüllt"
 
 #: src/decorator/string/IsNumberString.ts:32
 msgid "$property must be a number string"
