@@ -15,6 +15,10 @@ msgstr ""
 msgid "$property is not a valid decimal number."
 msgstr ""
 
+#: src/decorator/string/IsStrongPassword.ts:39
+msgid "$property is not strong enough"
+msgstr ""
+
 #: src/decorator/string/IsBIC.ts:27
 msgid "$property must be a BIC or SWIFT code"
 msgstr ""
@@ -135,7 +139,7 @@ msgstr ""
 msgid "$property must be a positive number"
 msgstr ""
 
-#: src/decorator/string/IsPostalCode.ts:34
+#: src/decorator/string/IsPostalCode.ts:32
 msgid "$property must be a postal code"
 msgstr ""
 
@@ -147,6 +151,10 @@ msgstr ""
 msgid "$property must be a string"
 msgstr ""
 
+#: src/decorator/string/is-tax-id.ts:36
+msgid "$property must be a Tax Identification Number"
+msgstr ""
+
 #: src/decorator/string/IsUUID.ts:29
 msgid "$property must be a UUID"
 msgstr ""
@@ -155,8 +163,12 @@ msgstr ""
 msgid "$property must be a valid domain name"
 msgstr ""
 
-#: src/decorator/typechecker/IsEnum.ts:26
+#: src/decorator/typechecker/IsEnum.ts:35
 msgid "$property must be a valid enum value"
+msgstr ""
+
+#: src/decorator/string/IsTimeZone.ts:37
+msgid "$property must be a valid IANA time-zone"
 msgstr ""
 
 #: src/decorator/string/IsDateString.ts:30
@@ -170,6 +182,10 @@ msgstr ""
 
 #: src/decorator/string/IsISO31661Alpha3.ts:25
 msgid "$property must be a valid ISO31661 Alpha3 code"
+msgstr ""
+
+#: src/decorator/string/is-iso4217-currency-code.ts:25
+msgid "$property must be a valid ISO4217 currency code"
 msgstr ""
 
 #: src/decorator/string/IsPhoneNumber.ts:42
@@ -201,7 +217,7 @@ msgid "$property must be an IBAN"
 msgstr ""
 
 #: src/decorator/object/IsInstance.ts:33
-msgid "$property must be an instance of $constraint1name"
+msgid "$property must be an instance of $constraint"
 msgstr ""
 
 #: src/decorator/typechecker/IsInt.ts:24
@@ -234,6 +250,10 @@ msgstr ""
 
 #: src/decorator/string/IsBase32.ts:27
 msgid "$property must be base32 encoded"
+msgstr ""
+
+#: src/decorator/string/IsBase58.ts:27
+msgid "$property must be base58 encoded"
 msgstr ""
 
 #: src/decorator/string/IsBase64.ts:27
@@ -349,7 +369,7 @@ msgstr ""
 msgid "$property must contain only letters (a-zA-Z)"
 msgstr ""
 
-#: src/decorator/string/IsAlphanumeric.ts:29
+#: src/decorator/string/IsAlphanumeric.ts:32
 msgid "$property must contain only letters and numbers"
 msgstr ""
 

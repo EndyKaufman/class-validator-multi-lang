@@ -1,29 +1,42 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: class-validator\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2024-11-22 13:43+0400\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 "
+"&& n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 "
+"&& n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: class-validator\n"
 "X-Crowdin-Project-ID: 418130\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /i18n/i18n/template.pot\n"
 "X-Crowdin-File-ID: 24\n"
-"Project-Id-Version: class-validator\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"PO-Revision-Date: 2021-12-27 18:04\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/decorator/object/IsInstance.ts:41
-msgid "$IS_INSTANCE decorator expects and object as value, but got falsy value."
-msgstr "декоратор $IS_INSTANCE ожидает в объекте как значение, но получил ложное значение."
+msgid ""
+"$IS_INSTANCE decorator expects and object as value, but got falsy value."
+msgstr ""
+"декоратор $IS_INSTANCE ожидает в объекте как значение, но получил ложное "
+"значение."
 
-#: src/decorator/date/MaxDate.ts:25
-#: src/decorator/date/MinDate.ts:25
+#: src/decorator/date/MaxDate.ts:25 src/decorator/date/MinDate.ts:25
 msgid "$property is $constraint1"
 msgstr "$property - $constraint1"
 
 #: src/decorator/string/IsDecimal.ts:32
 msgid "$property is not a valid decimal number."
 msgstr "$property не является допустимым десятичным числом."
+
+#: src/decorator/string/IsStrongPassword.ts:39
+msgid "$property is not strong enough"
+msgstr "$property недостаточно сильный"
 
 #: src/decorator/string/IsBIC.ts:27
 msgid "$property must be a BIC or SWIFT code"
@@ -145,7 +158,7 @@ msgstr "$property должен быть портом"
 msgid "$property must be a positive number"
 msgstr "$property должно быть положительным числом"
 
-#: src/decorator/string/IsPostalCode.ts:34
+#: src/decorator/string/IsPostalCode.ts:32
 msgid "$property must be a postal code"
 msgstr "$property должен быть почтовым индексом"
 
@@ -157,6 +170,10 @@ msgstr "$property должен быть спецификацией для Semant
 msgid "$property must be a string"
 msgstr "$property должен быть строкой"
 
+#: src/decorator/string/is-tax-id.ts:36
+msgid "$property must be a Tax Identification Number"
+msgstr "$property должен быть налоговым идентификационным номером"
+
 #: src/decorator/string/IsUUID.ts:29
 msgid "$property must be a UUID"
 msgstr "$property должен быть UUID"
@@ -165,12 +182,15 @@ msgstr "$property должен быть UUID"
 msgid "$property must be a valid domain name"
 msgstr "$property должен быть допустимым именем домена"
 
-#: src/decorator/typechecker/IsEnum.ts:26
+#: src/decorator/typechecker/IsEnum.ts:35
 msgid "$property must be a valid enum value"
 msgstr "$property должен быть допустимым значением enum"
 
-#: src/decorator/string/IsDateString.ts:30
-#: src/decorator/string/IsISO8601.ts:34
+#: src/decorator/string/IsTimeZone.ts:37
+msgid "$property must be a valid IANA time-zone"
+msgstr "$property должен быть действительным часовым поясом IANA"
+
+#: src/decorator/string/IsDateString.ts:30 src/decorator/string/IsISO8601.ts:34
 msgid "$property must be a valid ISO 8601 date string"
 msgstr "$property должен быть допустимой строкой даты ISO 8601"
 
@@ -182,13 +202,20 @@ msgstr "$property должен быть допустимым ISO31661 код Alp
 msgid "$property must be a valid ISO31661 Alpha3 code"
 msgstr "$property должен быть действительным ISO31661 код Alpha3"
 
+#: src/decorator/string/is-iso4217-currency-code.ts:25
+msgid "$property must be a valid ISO4217 currency code"
+msgstr "$property должен быть допустимым ISO4217 кодом валюты"
+
 #: src/decorator/string/IsPhoneNumber.ts:42
 msgid "$property must be a valid phone number"
 msgstr "$property должен быть действительным номером телефона"
 
 #: src/decorator/string/IsMilitaryTime.ts:29
-msgid "$property must be a valid representation of military time in the format HH:MM"
-msgstr "$property должен быть корректным представлением военного времени в формате HH:MM"
+msgid ""
+"$property must be a valid representation of military time in the format HH:MM"
+msgstr ""
+"$property должен быть корректным представлением военного времени в формате "
+"HH:MM"
 
 #: src/decorator/typechecker/IsArray.ts:24
 msgid "$property must be an array"
@@ -211,8 +238,8 @@ msgid "$property must be an IBAN"
 msgstr "$property должен быть IBAN"
 
 #: src/decorator/object/IsInstance.ts:33
-msgid "$property must be an instance of $constraint1name"
-msgstr "$property должен быть экземпляром $constraint1name"
+msgid "$property must be an instance of $constraint"
+msgstr "$property должен быть экземпляром $constraint"
 
 #: src/decorator/typechecker/IsInt.ts:24
 msgid "$property must be an integer number"
@@ -246,6 +273,10 @@ msgstr "$property должен быть URL-адресом"
 msgid "$property must be base32 encoded"
 msgstr "$property должен быть в кодировке base32"
 
+#: src/decorator/string/IsBase58.ts:27
+msgid "$property must be base58 encoded"
+msgstr "$property должен быть в кодировке base58"
+
 #: src/decorator/string/IsBase64.ts:27
 msgid "$property must be base64 encoded"
 msgstr "$property должен быть в кодировке base64"
@@ -267,11 +298,14 @@ msgid "$property must be locale"
 msgstr "$property должен быть локалью"
 
 #: src/decorator/string/Length.ts:37
-msgid "$property must be longer than or equal to $constraint1 and shorter than or equal to $constraint2 characters"
-msgstr "$property должен быть длиннее или равен $constraint1 и меньше или равен $constraint2 символов"
+msgid ""
+"$property must be longer than or equal to $constraint1 and shorter than or "
+"equal to $constraint2 characters"
+msgstr ""
+"$property должен быть длиннее или равен $constraint1 и меньше или равен "
+"$constraint2 символов"
 
-#: src/decorator/string/Length.ts:31
-#: src/decorator/string/MinLength.ts:28
+#: src/decorator/string/Length.ts:31 src/decorator/string/MinLength.ts:28
 msgid "$property must be longer than or equal to $constraint1 characters"
 msgstr "$property должен быть длиннее или равен $constraint1 символов"
 
@@ -359,7 +393,7 @@ msgstr "$property должен содержать только ASCII симво�
 msgid "$property must contain only letters (a-zA-Z)"
 msgstr "$property должен содержать только буквы (a-zA-Z)"
 
-#: src/decorator/string/IsAlphanumeric.ts:29
+#: src/decorator/string/IsAlphanumeric.ts:32
 msgid "$property must contain only letters and numbers"
 msgstr "$property должен содержать только буквы и цифры"
 
@@ -401,8 +435,11 @@ msgid "$property should not contain a $constraint1 string"
 msgstr "$property не должен содержать $constraint1 строку"
 
 #: src/decorator/string/IsByteLength.ts:29
-msgid "$property's byte length must fall into ($constraint1, $constraint2) range"
-msgstr "длина байта $property должна совпадать с диапазоном ($constraint1, $constraint2)"
+msgid ""
+"$property's byte length must fall into ($constraint1, $constraint2) range"
+msgstr ""
+"длина байта $property должна совпадать с диапазоном ($constraint1, "
+"$constraint2)"
 
 #: src/decorator/array/ArrayUnique.ts:44
 msgid "All $property's elements must be unique"
@@ -423,4 +460,3 @@ msgstr "минимально допустимая дата для "
 #: src/decorator/common/ValidateNested.ts:14
 msgid "nested property $property must be either object or array"
 msgstr "вложенное свойство $property должно быть либо объектом, либо массивом"
-
