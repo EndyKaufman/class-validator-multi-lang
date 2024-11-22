@@ -7,8 +7,7 @@ import { getText } from '../../multi-lang';
 export const IS_POSTAL_CODE = 'isPostalCode';
 
 /**
- * Check if the string is a postal code,
- * (locale is one of [ 'AD', 'AT', 'AU', 'BE', 'BG', 'BR', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'ID', 'IE' 'IL', 'IN', 'IR', 'IS', 'IT', 'JP', 'KE', 'LI', 'LT', 'LU', 'LV', 'MT', 'MX', 'NL', 'NO', 'NZ', 'PL', 'PR', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'UA', 'US', 'ZA', 'ZM' ] OR 'any'. If 'any' is used, function will check if any of the locals match. Locale list is validator.isPostalCodeLocales.).
+ * Check if the string is a postal code, in the specified locale.
  * If given value is not a string, then it returns false.
  */
 export function isPostalCode(value: unknown, locale: 'any' | ValidatorJS.PostalCodeLocale): boolean {
@@ -16,8 +15,7 @@ export function isPostalCode(value: unknown, locale: 'any' | ValidatorJS.PostalC
 }
 
 /**
- * Check if the string is a postal code,
- * (locale is one of [ 'AD', 'AT', 'AU', 'BE', 'BG', 'BR', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'ID', 'IE' 'IL', 'IN', 'IR', 'IS', 'IT', 'JP', 'KE', 'LI', 'LT', 'LU', 'LV', 'MT', 'MX', 'NL', 'NO', 'NZ', 'PL', 'PR', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'UA', 'US', 'ZA', 'ZM' ] OR 'any'. If 'any' is used, function will check if any of the locals match. Locale list is validator.isPostalCodeLocales.).
+ * Check if the string is a postal code, in the specified locale.
  * If given value is not a string, then it returns false.
  */
 export function IsPostalCode(
@@ -29,11 +27,8 @@ export function IsPostalCode(
       name: IS_POSTAL_CODE,
       constraints: [locale],
       validator: {
-        validate: (value, args): boolean => isPostalCode(value, args.constraints[0]),
-        defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + getText('$property must be a postal code'),
-          validationOptions
-        ),
+        validate: (value, args): boolean => isPostalCode(value, args?.constraints[0]),
+        defaultMessage: buildMessage(eachPrefix => eachPrefix + getText('$property must be a postal code'), validationOptions),
       },
     },
     validationOptions

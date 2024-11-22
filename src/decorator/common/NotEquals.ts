@@ -20,7 +20,7 @@ export function NotEquals(comparison: any, validationOptions?: ValidationOptions
       name: NOT_EQUALS,
       constraints: [comparison],
       validator: {
-        validate: (value, args): boolean => notEquals(value, args.constraints[0]),
+        validate: (value, args): boolean => notEquals(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property should not be equal to $constraint1'),
           validationOptions

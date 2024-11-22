@@ -20,7 +20,7 @@ export function IsNotIn(values: readonly any[], validationOptions?: ValidationOp
       name: IS_NOT_IN,
       constraints: [values],
       validator: {
-        validate: (value, args): boolean => isNotIn(value, args.constraints[0]),
+        validate: (value, args): boolean => isNotIn(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property should not be one of the following values: $constraint1'),
           validationOptions

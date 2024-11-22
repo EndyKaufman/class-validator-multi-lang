@@ -27,11 +27,8 @@ export function IsISBN(version?: IsISBNVersion, validationOptions?: ValidationOp
       name: IS_ISBN,
       constraints: [version],
       validator: {
-        validate: (value, args): boolean => isISBN(value, args.constraints[0]),
-        defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + getText('$property must be an ISBN'),
-          validationOptions
-        ),
+        validate: (value, args): boolean => isISBN(value, args?.constraints[0]),
+        defaultMessage: buildMessage(eachPrefix => eachPrefix + getText('$property must be an ISBN'), validationOptions),
       },
     },
     validationOptions

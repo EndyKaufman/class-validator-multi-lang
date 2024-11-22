@@ -48,11 +48,8 @@ export function IsMobilePhone(
       name: IS_MOBILE_PHONE,
       constraints: [locale, options],
       validator: {
-        validate: (value, args): boolean => isMobilePhone(value, args.constraints[0], args.constraints[1]),
-        defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + getText('$property must be a phone number'),
-          validationOptions
-        ),
+        validate: (value, args): boolean => isMobilePhone(value, args?.constraints[0], args?.constraints[1]),
+        defaultMessage: buildMessage(eachPrefix => eachPrefix + getText('$property must be a phone number'), validationOptions),
       },
     },
     validationOptions

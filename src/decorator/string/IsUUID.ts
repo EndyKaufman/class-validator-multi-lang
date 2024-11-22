@@ -25,7 +25,7 @@ export function IsUUID(version?: UUIDVersion, validationOptions?: ValidationOpti
       name: IS_UUID,
       constraints: [version],
       validator: {
-        validate: (value, args): boolean => isUUID(value, args.constraints[0]),
+        validate: (value, args): boolean => isUUID(value, args?.constraints[0]),
         defaultMessage: buildMessage(eachPrefix => eachPrefix + getText('$property must be a UUID'), validationOptions),
       },
     },

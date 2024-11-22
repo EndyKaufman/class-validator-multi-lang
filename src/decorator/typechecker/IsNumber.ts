@@ -16,17 +16,17 @@ export interface IsNumberOptions {
 /**
  * Checks if a given value is a number.
  */
-export function isNumber(value: unknown, options: IsNumberOptions = {}): boolean {
+export function isNumber(value: unknown, options: IsNumberOptions = {}): value is number {
   if (typeof value !== 'number') {
     return false;
   }
 
   if (value === Infinity || value === -Infinity) {
-    return options.allowInfinity;
+    return !!options.allowInfinity;
   }
 
   if (Number.isNaN(value)) {
-    return options.allowNaN;
+    return !!options.allowNaN;
   }
 
   if (options.maxDecimalPlaces !== undefined) {
@@ -51,7 +51,7 @@ export function IsNumber(options: IsNumberOptions = {}, validationOptions?: Vali
       name: IS_NUMBER,
       constraints: [options],
       validator: {
-        validate: (value, args): boolean => isNumber(value, args.constraints[0]),
+        validate: (value, args): boolean => isNumber(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property must be a number conforming to the specified constraints'),
           validationOptions
