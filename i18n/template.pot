@@ -155,16 +155,16 @@ msgstr ""
 msgid "$property must be a Tax Identification Number"
 msgstr ""
 
+#: src/decorator/string/IsUrl.ts:29
+msgid "$property must be a URL address"
+msgstr ""
+
 #: src/decorator/string/IsUUID.ts:29
 msgid "$property must be a UUID"
 msgstr ""
 
 #: src/decorator/string/IsFQDN.ts:29
 msgid "$property must be a valid domain name"
-msgstr ""
-
-#: src/decorator/typechecker/IsEnum.ts:35
-msgid "$property must be a valid enum value"
 msgstr ""
 
 #: src/decorator/string/IsTimeZone.ts:37
@@ -244,10 +244,6 @@ msgstr ""
 msgid "$property must be an object"
 msgstr ""
 
-#: src/decorator/string/IsUrl.ts:29
-msgid "$property must be an URL address"
-msgstr ""
-
 #: src/decorator/string/IsBase32.ts:27
 msgid "$property must be base32 encoded"
 msgstr ""
@@ -295,6 +291,10 @@ msgstr ""
 
 #: src/decorator/common/IsIn.ts:25
 msgid "$property must be one of the following values: $constraint1"
+msgstr ""
+
+#: src/decorator/typechecker/IsEnum.ts:35
+msgid "$property must be one of the following values: $constraint2"
 msgstr ""
 
 #: src/decorator/string/IsRFC3339.ts:27
@@ -354,7 +354,7 @@ msgid "$property must contain at least $constraint1 elements"
 msgstr ""
 
 #: src/decorator/array/ArrayMaxSize.ts:27
-msgid "$property must contain not more than $constraint1 elements"
+msgid "$property must contain no more than $constraint1 elements"
 msgstr ""
 
 #: src/decorator/string/IsMultibyte.ts:27

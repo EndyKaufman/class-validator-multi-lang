@@ -32,7 +32,7 @@ export function IsEnum(entity: object, validationOptions?: ValidationOptions): P
       validator: {
         validate: (value, args): boolean => isEnum(value, args?.constraints[0]),
         defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + getText('$property must be a valid enum value'),
+          eachPrefix => eachPrefix + getText('$property must be one of the following values: $constraint2'),
           validationOptions
         ),
       },
