@@ -38,7 +38,7 @@ export function Matches(
       name: MATCHES,
       constraints: [pattern, modifiers],
       validator: {
-        validate: (value, args): boolean => matches(value, args.constraints[0], args.constraints[1]),
+        validate: (value, args): boolean => matches(value, args?.constraints[0], args?.constraints[1]),
         defaultMessage: buildMessage(
           (eachPrefix, args) => eachPrefix + getText('$property must match $constraint1 regular expression'),
           validationOptions

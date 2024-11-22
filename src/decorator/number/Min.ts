@@ -12,7 +12,7 @@ export function min(num: unknown, min: number): boolean {
 }
 
 /**
- * Checks if the first number is greater than or equal to the second.
+ * Checks if the value is greater than or equal to the allowed minimum value.
  */
 export function Min(minValue: number, validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(
@@ -20,7 +20,7 @@ export function Min(minValue: number, validationOptions?: ValidationOptions): Pr
       name: MIN,
       constraints: [minValue],
       validator: {
-        validate: (value, args): boolean => min(value, args.constraints[0]),
+        validate: (value, args): boolean => min(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property must not be less than $constraint1'),
           validationOptions

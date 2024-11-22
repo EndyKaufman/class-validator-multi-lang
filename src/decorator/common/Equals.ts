@@ -20,7 +20,7 @@ export function Equals(comparison: any, validationOptions?: ValidationOptions): 
       name: EQUALS,
       constraints: [comparison],
       validator: {
-        validate: (value, args): boolean => equals(value, args.constraints[0]),
+        validate: (value, args): boolean => equals(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property must be equal to $constraint1'),
           validationOptions

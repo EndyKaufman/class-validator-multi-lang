@@ -7,7 +7,7 @@ import { getText } from '../../multi-lang';
 export const IS_URL = 'isUrl';
 
 /**
- * Checks if the string is an url.
+ * Checks if the string is a url.
  * If given value is not a string, then it returns false.
  */
 export function isURL(value: string, options?: ValidatorJS.IsURLOptions): boolean {
@@ -15,7 +15,7 @@ export function isURL(value: string, options?: ValidatorJS.IsURLOptions): boolea
 }
 
 /**
- * Checks if the string is an url.
+ * Checks if the string is a url.
  * If given value is not a string, then it returns false.
  */
 export function IsUrl(options?: ValidatorJS.IsURLOptions, validationOptions?: ValidationOptions): PropertyDecorator {
@@ -24,9 +24,9 @@ export function IsUrl(options?: ValidatorJS.IsURLOptions, validationOptions?: Va
       name: IS_URL,
       constraints: [options],
       validator: {
-        validate: (value, args): boolean => isURL(value, args.constraints[0]),
+        validate: (value, args): boolean => isURL(value, args?.constraints[0]),
         defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + getText('$property must be an URL address'),
+          eachPrefix => eachPrefix + getText('$property must be a URL address'),
           validationOptions
         ),
       },

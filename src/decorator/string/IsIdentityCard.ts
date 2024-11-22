@@ -31,7 +31,7 @@ export function IsIdentityCard(
       name: IS_IDENTITY_CARD,
       constraints: [locale],
       validator: {
-        validate: (value, args): boolean => isIdentityCard(value, args.constraints[0]),
+        validate: (value, args): boolean => isIdentityCard(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property must be a identity card number'),
           validationOptions

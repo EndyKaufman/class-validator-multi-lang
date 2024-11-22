@@ -27,7 +27,7 @@ export function IsCurrency(
       name: IS_CURRENCY,
       constraints: [options],
       validator: {
-        validate: (value, args): boolean => isCurrency(value, args.constraints[0]),
+        validate: (value, args): boolean => isCurrency(value, args?.constraints[0]),
         defaultMessage: buildMessage(
           eachPrefix => eachPrefix + getText('$property must be a currency'),
           validationOptions
