@@ -28,7 +28,10 @@ export function IsEmail(
       constraints: [options],
       validator: {
         validate: (value, args): boolean => isEmail(value, args?.constraints[0]),
-        defaultMessage: buildMessage(eachPrefix => eachPrefix + getText('$property must be an email'), validationOptions),
+        defaultMessage: buildMessage(
+          eachPrefix => eachPrefix + getText('$property must be an email'),
+          validationOptions
+        ),
       },
     },
     validationOptions

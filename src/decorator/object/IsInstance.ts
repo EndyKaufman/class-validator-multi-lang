@@ -28,9 +28,12 @@ export function IsInstance(
         validate: (value, args): boolean => isInstance(value, args?.constraints[0]),
         defaultMessage: buildMessage((eachPrefix, args) => {
           if (args?.constraints[0]) {
-            return eachPrefix + getText(`$property must be an instance of $constraint`).replace(
-              '$constraint',
-              args.constraints[0].name as string
+            return (
+              eachPrefix +
+              getText(`$property must be an instance of $constraint`).replace(
+                '$constraint',
+                args.constraints[0].name as string
+              )
             );
           } else {
             return (

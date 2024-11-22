@@ -1,3 +1,4 @@
+import { getText } from '../../multi-lang';
 import { ValidationOptions } from '../ValidationOptions';
 import { buildMessage, ValidateBy } from '../common/ValidateBy';
 import isTaxIDValidator from 'validator/lib/isTaxID';
@@ -32,7 +33,7 @@ export function IsTaxId(locale?: string, validationOptions?: ValidationOptions):
       validator: {
         validate: (value, args): boolean => isTaxId(value, args?.constraints[0]),
         defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + '$property must be a Tax Identification Number',
+          eachPrefix => eachPrefix + getText('$property must be a Tax Identification Number'),
           validationOptions
         ),
       },

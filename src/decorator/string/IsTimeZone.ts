@@ -1,3 +1,4 @@
+import { getText } from '../../multi-lang';
 import { ValidationOptions } from '../ValidationOptions';
 import { buildMessage, ValidateBy } from '../common/ValidateBy';
 
@@ -33,7 +34,7 @@ export function IsTimeZone(validationOptions?: ValidationOptions): PropertyDecor
       validator: {
         validate: (value, args): boolean => isTimeZone(value),
         defaultMessage: buildMessage(
-          eachPrefix => eachPrefix + '$property must be a valid IANA time-zone',
+          eachPrefix => eachPrefix + getText('$property must be a valid IANA time-zone'),
           validationOptions
         ),
       },
