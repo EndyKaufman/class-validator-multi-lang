@@ -39,7 +39,7 @@ const RU_I18N_MESSAGES = {
 
 const model = new MyClass();
 
-validator.validate(model, messages: RU_I18N_MESSAGES).then(errors => {
+validator.validate(model, { messages: RU_I18N_MESSAGES }).then(errors => {
   console.log(errors[0].constraints);
   // out: title должно быть равно test
 });
@@ -62,7 +62,7 @@ const RU_I18N_MESSAGES = JSON.parse(readFileSync(resolve(__dirname, './node_modu
 
 const model = new MyClass();
 
-validator.validate(model, messages: RU_I18N_MESSAGES).then(errors => {
+validator.validate(model, { messages: RU_I18N_MESSAGES }).then(errors => {
   console.log(errors[0].constraints);
   // out: title должен быть равен test
 });
@@ -1181,7 +1181,7 @@ const RU_I18N_MESSAGES = {
 
 const model = new MyClass();
 
-validator.validate(model, messages: RU_I18N_MESSAGES).then(errors => {
+validator.validate(model, { messages: RU_I18N_MESSAGES }).then(errors => {
   console.log(errors[0].constraints);
   // out: title должно быть равно test
 });
@@ -1204,7 +1204,7 @@ const RU_I18N_MESSAGES = JSON.parse(readFileSync(resolve(__dirname, './node_modu
 
 const model = new MyClass();
 
-validator.validate(model, messages: RU_I18N_MESSAGES).then(errors => {
+validator.validate(model, { messages: RU_I18N_MESSAGES }).then(errors => {
   console.log(errors[0].constraints);
   // out: title должен быть равен test
 });
