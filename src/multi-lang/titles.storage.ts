@@ -45,7 +45,13 @@ export function getClassValidatorPropertyTitles(object: object): ClassValidatorP
 
 export function getClassValidatorPropertyTitle(object: object, propertyName: string): string | undefined {
   const titles = getClassValidatorPropertyTitles(object);
-  return titles.get(propertyName);
+  const title = titles.get(propertyName)
+  if (title) return title
+  
+  const proto = Object.getPrototypeOf(object)
+  if (proto && proto !== Object) {
+    return getClassValidatorPropertyTitle(proto, propertyName)
+  }
 }
 
 // CLASS
